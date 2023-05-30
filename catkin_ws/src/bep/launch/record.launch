@@ -1,0 +1,11 @@
+<launch>
+	<arg name="usb" type="int" default="0"/>
+	
+	<node name="bep_serial" pkg="unitree_serial" type="main.py">
+		<!--<arg name="usb" value="/dev/ttyUSB$(arg usb)"/>-->	
+		<param name="usb" value="/dev/ttyUSB$(arg usb)"/>"
+	</node>
+	<!--<include file="$(find davis_renderes)/launch/davis_mono.launch"/>-->
+	<node name="davis_ros_driver" pkg="davis_ros_driver" type="davis_ros_driver"/>
+
+</launch>

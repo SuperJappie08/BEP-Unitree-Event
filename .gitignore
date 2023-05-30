@@ -1,0 +1,5 @@
+*/devel*
+*/logs*
+*/build*
+final-catkin_ws.code-workspace
+.vscode
