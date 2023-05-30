@@ -1,0 +1,15 @@
+[submodule "catkin_ws/src/unitree_legged_sdk"]
+	path = catkin_ws/src/unitree_legged_sdk
+	url = git@github.com:unitreerobotics/unitree_legged_sdk.git
+[submodule "catkin_ws/src/rpg_dvs_ros"]
+	path = catkin_ws/src/rpg_dvs_ros
+	url = git@github.com:uzh-rpg/rpg_dvs_ros.git
+[submodule "catkin_ws/src/catkin_simple"]
+	path = catkin_ws/src/catkin_simple
+	url = https://github.com/catkin/catkin_simple
+[submodule "catkin_ws/src/unitree_ros_to_real"]
+	path = catkin_ws/src/unitree_ros_to_real
+	url = https://github.com/unitreerobotics/unitree_ros_to_real
+[submodule "catkin_ws/src/gscam"]
+	path = catkin_ws/src/gscam
+	url = git@github.com:ros-drivers/gscam.git
