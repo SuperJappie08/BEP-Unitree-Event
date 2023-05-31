@@ -20,7 +20,7 @@ if __name__ == '__main__':
     rospy.init_node("bep_serial")
 
     # sub = rospy.Subscriber("/camera1/range_visual_face", Range, get_point_cloud)
-    pub = rospy.Publisher("/bep/serial_data", String, tcp_nodelay=True)
+    pub = rospy.Publisher("/bep/serial_data", String, tcp_nodelay=True, queue_size=10)
 
     port: Serial = Serial(device_id, baudrate=115200)
     print("Connect to serial")
