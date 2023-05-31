@@ -1,0 +1,5 @@
+<launch>
+    <node name="davis_ros_driver" pkg="davis_ros_driver" type="davis_ros_driver">
+        <rosparam command="load" file="$(find bep)/config/davis-config-events.yaml" />
+    </node>
+</launch>

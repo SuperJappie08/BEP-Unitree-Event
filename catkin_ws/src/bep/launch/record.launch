@@ -5,7 +5,6 @@
 		<!--<arg name="usb" value="/dev/ttyUSB$(arg usb)"/>-->	
 		<param name="usb" value="/dev/ttyUSB$(arg usb)"/>"
 	</node>
-	<!--<include file="$(find davis_renderes)/launch/davis_mono.launch"/>-->
-	<node name="davis_ros_driver" pkg="davis_ros_driver" type="davis_ros_driver"/>
 
+	<include file="$(find bep)/launch/davis.launch"/>
 </launch>

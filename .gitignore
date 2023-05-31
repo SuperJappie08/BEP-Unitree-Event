@@ -19,6 +19,7 @@ install_isolated/
 .idea/
 .vscode
 final-catkin_ws.code-workspace
+bags/
 
 # Python stuff
 venv/

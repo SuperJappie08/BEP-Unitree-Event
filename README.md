@@ -8,3 +8,5 @@ catkin config --skiplist dvs_ros_driver dvxplorer_ros_driver dvs_file_writer --c
 
 ## NOTE: 
 maybe also `--merge-devel`
+
+Camera calibration at /root/.ros/camera_info/{file}
