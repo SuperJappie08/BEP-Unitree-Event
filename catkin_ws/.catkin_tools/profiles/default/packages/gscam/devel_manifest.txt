@@ -1,9 +1,0 @@
-gscam
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/cmake.lock /home/jap/BEP/final/catkin_ws/devel/./cmake.lock
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/share/gscam/cmake/gscamConfig-version.cmake /home/jap/BEP/final/catkin_ws/devel/share/gscam/cmake/gscamConfig-version.cmake
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/share/gscam/cmake/gscamConfig.cmake /home/jap/BEP/final/catkin_ws/devel/share/gscam/cmake/gscamConfig.cmake
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/lib/libgscam.so /home/jap/BEP/final/catkin_ws/devel/lib/libgscam.so
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/lib/libGSCamNodelet.so /home/jap/BEP/final/catkin_ws/devel/lib/libGSCamNodelet.so
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/lib/gscam/gscam /home/jap/BEP/final/catkin_ws/devel/lib/gscam/gscam
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/lib/gscam/gscam_node /home/jap/BEP/final/catkin_ws/devel/lib/gscam/gscam_node
-/home/jap/BEP/final/catkin_ws/devel/.private/gscam/lib/pkgconfig/gscam.pc /home/jap/BEP/final/catkin_ws/devel/lib/pkgconfig/gscam.pc

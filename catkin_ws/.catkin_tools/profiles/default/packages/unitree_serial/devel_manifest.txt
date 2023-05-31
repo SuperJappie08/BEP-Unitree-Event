@@ -1,8 +1,0 @@
-unitree_serial
-/home/jap/BEP/final/catkin_ws/devel/.private/unitree_serial/cmake.lock /home/jap/BEP/final/catkin_ws/devel/./cmake.lock
-/home/jap/BEP/final/catkin_ws/devel/.private/unitree_serial/share/unitree_serial/cmake/unitree_serialConfig-version.cmake /home/jap/BEP/final/catkin_ws/devel/share/unitree_serial/cmake/unitree_serialConfig-version.cmake
-/home/jap/BEP/final/catkin_ws/devel/.private/unitree_serial/share/unitree_serial/cmake/unitree_serialConfig.cmake /home/jap/BEP/final/catkin_ws/devel/share/unitree_serial/cmake/unitree_serialConfig.cmake
-/home/jap/BEP/final/catkin_ws/devel/.private/unitree_serial/lib/pkgconfig/unitree_serial.pc /home/jap/BEP/final/catkin_ws/devel/lib/pkgconfig/unitree_serial.pc
-/home/jap/BEP/final/catkin_ws/devel/.private/unitree_serial/lib/python3/dist-packages/unitree_serial/__init__.py /home/jap/BEP/final/catkin_ws/devel/lib/python3/dist-packages/unitree_serial/__init__.py
-/home/jap/BEP/final/catkin_ws/devel/.private/unitree_serial/lib/unitree_serial/cmake.lock /home/jap/BEP/final/catkin_ws/devel/lib/unitree_serial/cmake.lock
-/home/jap/BEP/final/catkin_ws/devel/.private/unitree_serial/lib/unitree_serial/main.py /home/jap/BEP/final/catkin_ws/devel/lib/unitree_serial/main.py
