@@ -1,5 +1,25 @@
-*/devel*
-*/logs*
-*/build*
-final-catkin_ws.code-workspace
+devel/
+logs/
+build/
+bin/
+lib/
+msg_gen/
+srv_gen/
+build_isolated/
+devel_isolated/
+
+# Catkin custom files
+CATKIN_IGNORE
+.catkin_tools/
+.catkin_workspace
+.rosinstall*
+install_isolated/
+
+# misc
+.idea/
 .vscode
+final-catkin_ws.code-workspace
+
+# Python stuff
+venv/
+env/

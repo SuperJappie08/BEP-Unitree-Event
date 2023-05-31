@@ -16,9 +16,9 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 # include_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/include)
-include_directories(/home/$ENV{USER}/BEP/final/catkin_ws/src/unitree_legged_sdk/include)
+include_directories(${CMAKE_SOURCE_DIR}/../unitree_legged_sdk/include)
 #link_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/lib)
-link_directories(/home/$ENV{USER}/BEP/final/catkin_ws/src/unitree_legged_sdk/lib)
+link_directories(${CMAKE_SOURCE_DIR}/../unitree_legged_sdk/lib)
 #link_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/lib)
 #link_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/lib)
 string(CONCAT LEGGED_SDK_NAME libunitree_legged_sdk_amd64.so)
