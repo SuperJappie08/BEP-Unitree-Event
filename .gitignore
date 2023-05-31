@@ -10,7 +10,7 @@ devel_isolated/
 
 # Catkin custom files
 CATKIN_IGNORE
-.catkin_tools/
+.catkin_tools
 .catkin_workspace
 .rosinstall*
 install_isolated/
