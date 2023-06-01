@@ -10,3 +10,19 @@ catkin config --skiplist dvs_ros_driver dvxplorer_ros_driver dvs_file_writer --c
 maybe also `--merge-devel`
 
 Camera calibration at /root/.ros/camera_info/{file}
+
+# RUN RECORD SCRIPT
+```
+. ./record.sh
+```
+or
+```
+source ./record.sh
+```
+
+# Requirements
+- sshpass
+
+```
+sudo apt-get install sshpass
+```
