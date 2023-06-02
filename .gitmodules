@@ -9,7 +9,7 @@
 	url = https://github.com/catkin/catkin_simple
 [submodule "catkin_ws/src/unitree_ros_to_real"]
 	path = catkin_ws/src/unitree_ros_to_real
-	url = https://github.com/unitreerobotics/unitree_ros_to_real
+	url = git@github.com:unitreerobotics/unitree_ros_to_real.git
 [submodule "catkin_ws/src/gscam"]
 	path = catkin_ws/src/gscam
 	url = git@github.com:ros-drivers/gscam.git
