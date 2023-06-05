@@ -20,7 +20,7 @@ else
     echo -e "\033[1;32m[OK]\033[0m ROS Loaded"
 fi
 
-if [ $ROS_MASTER_URI != "http://192.168.12.1:11311/" ] && [ $HOSTNAME = "raspberrypi" ] && [ $USER = "pi" ] && [ -e "$HOME/network_setup.sh" ]
+if [ $ROS_MASTER_URI != "http://192.168.12.1:11311/" ] && [ $HOSTNAME = "raspberrypi" ] && [ $USER = "pi" ] && [ -e "$HOME/network_bridge.sh" ]
 then
     echo "This is running on the robot"
 else
@@ -64,7 +64,7 @@ then
         if ping -c 1 -W 1 -q 192.168.12.1 > /dev/null;
         then
             echo "\033[1;33m[Ok]\033[0m Found Robot, bridging network."
-            sshpass -p "123" ssh -o StrictHostKeyChecking=no pi@192.168.12.1 "./network_setup.sh"
+            sshpass -p "123" ssh -o StrictHostKeyChecking=no pi@192.168.12.1 "./network_bridge.sh"
         else
             echo -e "\033[1;33m[TESTING]\033[0m Robot was not found on the network. Continuing for testing"
         fi

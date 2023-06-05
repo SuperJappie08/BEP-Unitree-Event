@@ -143,6 +143,10 @@ set(EXTRA_LIBS ${LEGGED_SDK_NAME} lcm)
 add_executable(${PROJECT_NAME}_node src/onboard_controller_node.cpp)
 add_dependencies(${PROJECT_NAME}_node ${catkin_EXPORTED_TARGETS})
 
+add_executable(bep_capture_node src/onboard_controller_node.cpp)
+add_dependencies(bep_capture_node ${catkin_EXPORTED_TARGETS})
+
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -155,6 +159,10 @@ add_dependencies(${PROJECT_NAME}_node ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_node
+  ${catkin_LIBRARIES} ${EXTRA_LIBS} 
+)
+
+target_link_libraries(bep_capture_node
   ${catkin_LIBRARIES} ${EXTRA_LIBS} 
 )
 
@@ -175,6 +183,10 @@ target_link_libraries(${PROJECT_NAME}_node
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
 install(TARGETS ${PROJECT_NAME}_node
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(TARGETS bep_capture_node
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

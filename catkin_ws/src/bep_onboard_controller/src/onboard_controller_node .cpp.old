@@ -49,22 +49,6 @@ void* update_loop(void* param)
     }
 }
 
-void* update_stuff(void* param)
-{
-    geometry_msgs::Twist *data = (geometry_msgs::Twist *)param;
-    while(ros::ok){
-      auto tmp = ros::topic::waitForMessage<geometry_msgs::Twist>("/cmd_bep");
-        
-    data->linear.x = tmp->linear.x;
-    data->linear.y = tmp->linear.y;
-    data->linear.z = tmp->linear.z;
-    data->angular.x = tmp->angular.x;
-    data->angular.y = tmp->angular.y;
-    data->angular.z = tmp->angular.z;
-        usleep(2000);
-    }
-}
-
 template<typename TCmd, typename TState, typename TLCM>
 int mainHelper(int argc, char *argv[], TLCM &roslcm)
 {
@@ -88,13 +72,12 @@ int mainHelper(int argc, char *argv[], TLCM &roslcm)
     TState RecvHighLCM = {0};
     unitree_legged_msgs::HighCmd SendHighROS;
     unitree_legged_msgs::HighState RecvHighROS;
-    geometry_msgs::Twist msg;
 
     roslcm.SubscribeState();
 
     pthread_t tid;
     pthread_create(&tid, NULL, update_loop<TLCM>, &roslcm);
-    pthread_create(&tid, NULL, update_stuff, &msg);
+
     while (ros::ok()){
         motiontime = motiontime+2;
         roslcm.Get(RecvHighLCM);
@@ -115,28 +98,28 @@ int mainHelper(int argc, char *argv[], TLCM &roslcm)
         SendHighROS.yawSpeed = 0.0f;
         SendHighROS.reserve = 0;
 
-        // geometry_msgs::Twist::ConstPtr msg = ros::topic::waitForMessage<geometry_msgs::Twist>("/cmd_bep")
+        geometry_msgs::Twist::ConstPtr msg = ros::topic::waitForMessage<geometry_msgs::Twist>("/cmd_bep")
 
-        if (abs(msg.linear.x) > 0.0f) {
+        if (abs(msg->linear.x) > 0.0f) {
             SendHighROS.mode = 2;
             SendHighROS.gaitType = 2;
-            SendHighROS.velocity[0] = (float) msg.linear.x;
+            SendHighROS.velocity[0] = (float) msg->linear.x;
             SendHighROS.footRaiseHeight = 0.1;
             SendHighROS.bodyHeight = 0.28;
         }
 
-        if (abs(msg.linear.y) > 0.0f) {
+        if (abs(msg->linear.y) > 0.0f) {
             SendHighROS.mode = 2;
             SendHighROS.gaitType = 2;
-            SendHighROS.velocity[1] = (float) msg.linear.y;
+            SendHighROS.velocity[1] = (float) msg->linear.y;
             SendHighROS.footRaiseHeight = 0.1;
             SendHighROS.bodyHeight = 0.28;
         }
 
-        if (abs(msg.angular.z) > 0) {
+        if (abs(msg->angular.z) > 0) {
             SendHighROS.mode = 2;
             SendHighROS.gaitType = 2;
-            SendHighROS.yawSpeed = (float) msg.angular.z;
+            SendHighROS.yawSpeed = (float) msg->angular.z;
             SendHighROS.footRaiseHeight = 0.1;
             SendHighROS.bodyHeight = 0.28;
         }

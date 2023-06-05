@@ -7,13 +7,13 @@ teleop:
       -
         axis: 1
         target: linear.x
-        scale: 0.5
-        offset: -0.03
+        scale: 0.8
+        # offset: -0.03
       -
         axis: 0
-        target: angular.y
-        scale: 0.3
+        target: linear.y
+        scale: 0.8
       -
-        axis: 2
+        axis: 3
         target: angular.z
-        scale: 0.5
+        scale: 0.8

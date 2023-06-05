@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="unitree_legged_real" type="lcm_server" name="node_lcm_server"
+          respawn="false" output="screen" args="HIGHLEVEL" />
+
+    <param name="control_level" value="HIGHLEVEL"/>
+
+    <node pkg="bep_onboard_controller" type="bep_capture_node" name="bep_capture_node" output="screen"/>
+</launch>
