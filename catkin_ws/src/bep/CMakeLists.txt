@@ -9,20 +9,18 @@ project(bep)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   # rviz
-  roscpp
-  std_msgs
+  # roscpp
+  # std_msgs
+  # joy
   geometry_msgs
   unitree_legged_msgs
+  davis_ros_driver
 )
 
-# include_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/include)
-include_directories(${CMAKE_SOURCE_DIR}/../unitree_legged_sdk/include)
-#link_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/lib)
-link_directories(${CMAKE_SOURCE_DIR}/../unitree_legged_sdk/lib)
-#link_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/lib)
-#link_directories(/home/$ENV{USER}/Robot_SDK/unitree_legged_sdk/lib)
-string(CONCAT LEGGED_SDK_NAME libunitree_legged_sdk_amd64.so)
-set(EXTRA_LIBS ${LEGGED_SDK_NAME} lcm)
+# include_directories(${CMAKE_SOURCE_DIR}/../unitree_legged_sdk/include)
+# link_directories(${CMAKE_SOURCE_DIR}/../unitree_legged_sdk/lib)
+# string(CONCAT LEGGED_SDK_NAME libunitree_legged_sdk_amd64.so)
+# set(EXTRA_LIBS ${LEGGED_SDK_NAME} lcm)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -217,7 +215,10 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+#############
+## test-1  ##
+#############
 
-add_executable(test-1 src/exe/test-1.cpp)
-target_link_libraries(test-1 ${EXTRA_LIBS} ${catkin_LIBRARIES})
-add_dependencies(test-1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_executable(test-1 src/exe/test-1.cpp)
+# target_link_libraries(test-1 ${EXTRA_LIBS} ${catkin_LIBRARIES})
+# add_dependencies(test-1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

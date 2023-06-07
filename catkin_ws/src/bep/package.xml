@@ -53,18 +53,18 @@
   <build_depend>std_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>roscpp</build_depend>
-  <build_depend>unitree_legged_sdk</build_depend>
+  <!-- <build_depend>unitree_legged_sdk</build_depend> -->
   <!-- <build_export_depend>rviz</build_export_depend> -->
   <build_export_depend>std_msgs</build_export_depend>
   <build_export_depend>geometry_msgs</build_export_depend>
   <!-- <exec_depend>rviz</exec_depend> -->
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
- <exec_depend>gscam</exec_depend> 
- <depend>unitree_legged_msgs</depend>
+ <exec_depend>gscam</exec_depend>
+ <!-- <depend>unitree_legged_msgs</depend> -->
  <exec_depend>joy_teleop</exec_depend>
  <exec_depend>joy</exec_depend>
-
+ <exec_depend>davis_ros_driver</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

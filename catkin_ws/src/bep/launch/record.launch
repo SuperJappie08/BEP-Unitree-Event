@@ -1,12 +1,12 @@
 <launch>
-	<arg name="usb" type="int"/>
+	<!-- <arg name="usb" type="int"/> -->
 	
-	<group if="$(arg usb)">
-		<node name="bep_serial" pkg="unitree_serial" type="main.py">
+	<!-- <group if="$(arg usb)"> -->
+		<!-- <node name="bep_serial" pkg="unitree_serial" type="main.py"> -->
 			<!--<arg name="usb" value="/dev/ttyUSB$(arg usb)"/>-->	
-			<param name="usb" value="/dev/ttyUSB$(arg usb)"/>"
-		</node>
-	</group>
+			<!-- <param name="usb" value="/dev/ttyUSB$(arg usb)"/>" -->
+		<!-- </node> -->
+	<!-- </group> -->
 
 	<include file="$(find bep)/launch/davis.launch"/>
 </launch>
